@@ -1,0 +1,127 @@
+# Instructions
+
+During your interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
+
+You should also use the `.cursorrules` file as a Scratchpad to organize your thoughts. Especially when you receive a new task, you should first review the content of the Scratchpad, clear old different task if necessary, first explain the task, and plan the steps you need to take to complete the task. You can use todo markers to indicate the progress, e.g.
+[X] Task 1
+[ ] Task 2
+
+Also update the progress of the task in the Scratchpad when you finish a subtask.
+Especially when you finished a milestone, it will help to improve your depth of task accomplishment to use the Scratchpad to reflect and plan.
+The goal is to help you maintain a big picture as well as the progress of the task. Always refer to the Scratchpad when you plan the next step.
+
+# Lessons
+
+## User Specified Lessons
+
+- You have a python venv in ./venv. Use it.
+- Include info useful for debugging in the program output.
+- Read the file before you try to edit it.
+- Due to Cursor's limit, when you use `git` and `gh` and need to submit a multiline commit message, first write the message in a file, and then use `git commit -F <filename>` or similar command to commit. And then remove the file. Include "[Cursor] " in the commit message and PR title.
+
+## Cursor learned
+
+- For search results, ensure proper handling of different character encodings (UTF-8) for international queries
+- Add debug information to stderr while keeping the main output clean in stdout for better pipeline integration
+- When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
+- Use 'gpt-4o' as the model name for OpenAI's GPT-4 with vision capabilities
+
+# Scratchpad
+
+## Italienisch-Vokabeln Migration Projekt
+
+### Ziel
+Umwandlung des Japanisch-Vokabeltrainers in einen Italienisch-Vokabeltrainer unter Beibehaltung der Projektstruktur und Anpassung an das neue Vokabelformat.
+
+### Datenformat-Analyse
+[X] Analyse des neuen italienischen Vokabelformats
+[X] Vergleich mit bestehendem japanischen Format
+[X] Identifikation der notwendigen Änderungen
+
+### Implementierungsplan
+
+#### 1. Typdefinitionen und Interfaces
+[X] Anpassung der VocabularyCard Interface
+[X] Anpassung der VocabularyMeta Interface
+[X] Anpassung der VocabularyData Interface
+[X] Anpassung der QuizConfig Interface
+[X] Anpassung der QuizResult Interface
+
+#### 2. Datenverwaltung
+[X] Anpassung des useVocabularyManager Hooks
+[X] Aktualisierung der Speicherlogik
+[X] Anpassung der Duplikat-Prüfung
+[X] Implementierung der Tags-Funktionalität
+[X] Anpassung der SM2-Algorithmus-Integration
+
+#### 3. UI-Komponenten
+[X] Anpassung der VocabularyTab Komponente
+[X] Anpassung der VocabularySearch Komponente
+[X] Anpassung der EditVocabulary Komponente
+[X] Anpassung der AddVocabulary Komponente
+
+#### 4. Quiz-Komponenten
+[X] QuizSelection.tsx
+  - Entfernen der japanisch-spezifischen Abfragerichtungen
+  - Anpassung der Quiz-Modi für italienische Vokabeln
+  - Aktualisierung der Statistiken und Anzeigen
+
+[X] Quiz.tsx
+  - Anpassung der Abfragerichtungen (it-to-de, de-to-it)
+  - Entfernen der japanisch-spezifischen Felder (kanji, kana, romaji)
+  - Aktualisierung der Quiz-Karten-Anzeige
+  - Anpassung der Ergebnisanzeige
+
+[X] QuizTab.tsx
+  - Anpassung der Abfragerichtungen (it-to-de, de-to-it)
+  - Entfernen der japanisch-spezifischen Elemente
+  - Aktualisierung der UI-Texte und Beschreibungen
+  - Anpassung der Statistiken und Anzeigen
+
+[X] RepeatQuiz.tsx
+  - Anpassung der Wiederholungslogik für italienische Vokabeln
+  - Aktualisierung der Quiz-Karten-Anzeige
+  - Überprüfung der Ergebnisverarbeitung
+
+[X] Settings.tsx
+  - Anpassung der Quiz-Einstellungen für italienische Vokabeln
+  - Aktualisierung der Abfragerichtungen
+  - Überprüfung der Standardeinstellungen
+
+#### 5. Such- und Filterfunktionen
+[X] Anpassung der Suchlogik für italienische Vokabeln
+[ ] Implementierung der Tags-Filterung
+[ ] Anpassung der Sortierfunktionen
+
+#### 6. Datenmigration
+[ ] Erstellung eines Migrationsskripts
+[ ] Test der Migration mit Beispieldaten
+[ ] Implementierung der Fehlerbehandlung
+
+#### 7. Testing und Validierung
+[ ] Unit Tests für neue Funktionalitäten
+[ ] Integration Tests für die Migration
+[ ] UI-Tests für die angepassten Komponenten
+[ ] Performance-Tests
+
+#### 8. Dokumentation
+[ ] Aktualisierung der README
+[ ] Dokumentation der API-Änderungen
+[ ] Erstellung einer Migrationsanleitung
+
+### Aktuelle Prioritäten
+1. Anpassung der Typdefinitionen ✓
+2. Grundlegende Datenverwaltung ✓
+3. Basis-UI-Komponenten ✓
+4. Quiz-Komponenten ✓
+   - QuizSelection.tsx ✓
+   - Quiz.tsx ✓
+   - QuizTab.tsx ✓
+   - RepeatQuiz.tsx ✓
+   - Settings.tsx ✓
+
+### Notizen
+- Neue Felder (notes, tags) sind optional
+- SM2-Datenstruktur bleibt unverändert
+- Beibehaltung der bestehenden Projektstruktur
+- Fokus auf Benutzerfreundlichkeit bei der Migration 

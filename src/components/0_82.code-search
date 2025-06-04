@@ -1,0 +1,9 @@
+# Query: 0.82
+# ContextLines: 1
+
+1 result - 1 file
+
+src/components/Settings.tsx:
+  213              <h1 className="text-xl font-extralight tracking-widest">Einstellungen</h1>
+  214:             <span className="text-xs align-top ml-2 text-amber-100">V0.822</span>
+  215            </div>
